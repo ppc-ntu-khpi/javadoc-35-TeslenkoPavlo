@@ -1,29 +1,79 @@
 package domain;
+
+ /**
+ * The class Manager extends employee
+ */ 
 public class Manager extends Employee {
 
-    public Manager(Employee[] employees, String name, String jobTitle, int level, String dept) {
+
+/** 
+ *
+ * Manager
+ *
+ * @param employees  the employees. 
+ * @param name  the name. 
+ * @param jobTitle  the job title. 
+ * @param level  the level. 
+ * @param dept  the dept. 
+ * @return public
+ */
+    public Manager(Employee[] employees, String name, String jobTitle, int level, String dept) { 
+
         super(name, jobTitle, level, dept);
         this.employees = employees;
     }
 
     @Override
-    public String toString() {
+
+/** 
+ *
+ * To string
+ *
+ * @return String
+ */
+    public String toString() { 
+
         return super.toString()+"\nEmployees: "+getEmployees(); 
     }
 
-    public Manager(Employee[] employees) {
+
+/** 
+ *
+ * Manager
+ *
+ * @param employees  the employees. 
+ * @return public
+ */
+    public Manager(Employee[] employees) { 
+
         super();
         this.employees = employees;
     }
     
-    public Manager() {
+
+/** 
+ *
+ * Manager
+ *
+ * @return public
+ */
+    public Manager() { 
+
         super();
         employees = new Employee[10];
     }
 
     private Employee[] employees;
 
-    public String getEmployees() {
+
+/** 
+ *
+ * Gets the employees
+ *
+ * @return the employees
+ */
+    public String getEmployees() { 
+
         String s = "";
         for (Employee e : employees) {
             s = s + e.getName() + ", ";
@@ -32,11 +82,27 @@ public class Manager extends Employee {
         return s;
     }
 
-    public void setEmployees(Employee[] employees) {
+
+/** 
+ *
+ * Sets the employees
+ *
+ * @param employees  the employees. 
+ */
+    public void setEmployees(Employee[] employees) { 
+
         this.employees=employees;
     }
 
-    public Employee[] getEmployeesList() {
+
+/** 
+ *
+ * Gets the employees list
+ *
+ * @return the employees list
+ */
+    public Employee[] getEmployeesList() { 
+
         return employees;
     }
 

@@ -1,8 +1,20 @@
 package domain;
+
+ /**
+ * The class Employee
+ */ 
 public class Employee {
 
     @Override
-    public String toString() {
+
+/** 
+ *
+ * To string
+ *
+ * @return String
+ */
+    public String toString() { 
+
         return "\nEmployee ID= " + ID + "\nName= " + name + "\nJobTitle= " + jobTitle + "\nLevel= " + level + "\nDept= " + dept;
     }
 
@@ -14,7 +26,18 @@ public class Employee {
 
    // private static int employeesCount = 0;
 
-    public Employee(String name, String jobTitle, int level, String dept) {
+
+/** 
+ *
+ * It is a constructor. 
+ *
+ * @param name  the name. 
+ * @param jobTitle  the job title. 
+ * @param level  the level. 
+ * @param dept  the dept. 
+ */
+    public Employee(String name, String jobTitle, int level, String dept) { 
+
         this();
         setName(name);
         this.jobTitle = jobTitle;
@@ -30,26 +53,65 @@ public class Employee {
         this.dept = dept;
     }
 
-    public Employee() {
+
+/** 
+ *
+ * It is a constructor. 
+ *
+ */
+    public Employee() { 
+
         ID = (int)(Math.random()*1000);
 //        if (ID > 10000) {
 //            throw new NumberFormatException("ERROR! Employee's ID cannot be greater than 10000. Employee is not created!");
 //        }
     }
 
-    public void setJobTitle(String job) {
+
+/** 
+ *
+ * Sets the job title
+ *
+ * @param job  the job. 
+ */
+    public void setJobTitle(String job) { 
+
         jobTitle = job;
     }
 
-    public String getJobTitle() {
+
+/** 
+ *
+ * Gets the job title
+ *
+ * @return the job title
+ */
+    public String getJobTitle() { 
+
         return jobTitle;
     }
 
-    public String getName() {
+
+/** 
+ *
+ * Gets the name
+ *
+ * @return the name
+ */
+    public String getName() { 
+
         return name;
     }
 
-    public void setLevel(int level) {
+
+/** 
+ *
+ * Sets the level
+ *
+ * @param level  the level. 
+ */
+    public void setLevel(int level) { 
+
         switch (level) {
             case 1:
             case 2:
@@ -61,19 +123,51 @@ public class Employee {
         }
     }
 
-    public int getLevel() {
+
+/** 
+ *
+ * Gets the level
+ *
+ * @return the level
+ */
+    public int getLevel() { 
+
         return level;
     }
 
-    public String getDept() {
+
+/** 
+ *
+ * Gets the dept
+ *
+ * @return the dept
+ */
+    public String getDept() { 
+
         return dept;
     }
 
-    public void setDept(String dept) {
+
+/** 
+ *
+ * Sets the dept
+ *
+ * @param dept  the dept. 
+ */
+    public void setDept(String dept) { 
+
         this.dept = dept;
     }
 
-    public void setName(String name) {
+
+/** 
+ *
+ * Sets the name
+ *
+ * @param name  the name. 
+ */
+    public void setName(String name) { 
+
 //        boolean correctName = true;
 //        for (int i = 0; i < name.length(); i++) {
 //            char s = name.charAt(i);
